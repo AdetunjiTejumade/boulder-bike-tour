@@ -1,4 +1,5 @@
 import React from 'react'
+import Counter from './counter'
 import 
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
     return (
         // render here
         <>
+        <Counter />
         </>
     )
 }
