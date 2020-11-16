@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './navbar'
+import Home from '././home/counter'
 import '../../assets/stylesheets/main.css'
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
         <>
             <Navbar />
             <h1>Hello World</h1>
+            <Home />
+            
         </>
     )
 }
