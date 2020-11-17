@@ -7,12 +7,12 @@ function Counter() {
         <>
             {/* <Countdown 
                 /> */}
-            <div className="flex justify-center border-4 h-100">
-                <div className="w-32 text-center pt-5 text-5xl ">05 <br /><span className="text-base">days</span></div>
-                <div className="w-32 text-center pt-5">14 <br /> Hours</div>
-                <div className="w-32 text-center pt-5">50 <br /> Minutes</div>
-                <div className="w-32 text-center pt-5">30 <br /> Second</div>
-            </div>
+            <ul className="border-4 h-100 bg-yellow-500 text-center">
+                <li className="inline-block text-5xl p-2 uppercase">365 <br /><span className="block text-2xl">days</span></li>
+                <li className="inline-block text-5xl p-2 uppercase">21 <br /><span className="block text-2xl"> Hours</span></li>
+                <li className="inline-block text-5xl p-2 uppercase">28 <br /><span className="block text-2xl"> Minutes</span> </li>
+                <li className="inline-block text-5xl p-2 uppercase">30 <br /><span className="block text-2xl"> Second</span> </li>
+            </ul>
         </>
     )
 }

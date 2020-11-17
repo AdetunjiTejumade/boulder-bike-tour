@@ -5,7 +5,7 @@ function Navbar() {
     return (
         // render here
         <>
-        
+        {/*TODO: change display from flex on smaller screens */}
         <div className="flex justify-between p-6">
             <div className="text-black">
                 <h1 className="font-bold">Rider</h1>
