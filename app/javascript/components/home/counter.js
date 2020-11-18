@@ -7,11 +7,13 @@ function Counter() {
         <>
             {/* <Countdown 
                 /> */}
-            <ul className="border-4 h-100 bg-yellow-500 text-center">
-                <li className="inline-block text-5xl p-2 uppercase">365 <br /><span className="block text-2xl">days</span></li>
-                <li className="inline-block text-5xl p-2 uppercase">21 <br /><span className="block text-2xl"> Hours</span></li>
-                <li className="inline-block text-5xl p-2 uppercase">28 <br /><span className="block text-2xl"> Minutes</span> </li>
-                <li className="inline-block text-5xl p-2 uppercase">30 <br /><span className="block text-2xl"> Second</span> </li>
+            <ul className="h-100 text-center text-white mt-32 uppercase">
+                <li className="inline-block text-6xl p-2  px-4 border-r-2">03 <br /><span className="block text-2xl">month</span></li>
+                <li className="inline-block text-6xl p-2 px-4 border-r-2">365 <br /><span className="block text-2xl">days</span></li>
+                <li className="inline-block text-6xl p-2 px-4 border-r-2">365 <br /><span className="block text-2xl">days</span></li>
+                <li className="inline-block text-6xl p-2 px-4 border-r-2">21 <br /><span className="block text-2xl"> Hours</span></li>
+                <li className="inline-block text-6xl p-2 px-4 border-r-2">28 <br /><span className="block text-2xl"> Minutes</span> </li>
+                <li className="inline-block text-6xl p-2 pl-4">30 <br /><span className="block text-2xl"> Second</span> </li>
             </ul>
         </>
     )
