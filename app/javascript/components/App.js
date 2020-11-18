@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './navbar'
-import Home from '././home/counter'
+import Home from '././home/home'
 import '../../assets/stylesheets/main.css'
 
 function App() {
@@ -14,12 +14,9 @@ function App() {
             <input type='text' value={text} onChange={changeText}/>
             {text}
         </div> */
-        <>
-            <Navbar />
-            <h1>Hello World</h1>
-            <Home />
-            
-        </>
+        <div className="h-full">
+            <Home />         
+        </div>
     )
 }
 

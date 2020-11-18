@@ -6,16 +6,16 @@ function Navbar() {
         // render here
         <>
         {/*TODO: change display from flex on smaller screens */}
-        <div className="flex justify-between p-6">
-            <div className="text-black">
+        <div className="md:flex justify-between p-6 text-white uppercase">
+            <div className="">
                 <h1 className="font-bold">Rider</h1>
             </div>
-            <nav className="">
-                <a href="" className="mr-12">Home</a>
-                <a href="" className="mr-12">Photos</a>
-                <a href="" className="mr-12">Riders</a>
-                <a href="" className="mr-12">Location</a>
-                <a href="" className="mr-12">Contest</a>
+            <nav className="text-center ">
+                <a href="" className="sm:mr-12 block sm:inline">Home</a>
+                <a href="" className="sm:mr-12 block sm:inline">Photos</a>
+                <a href="" className="sm:mr-12 block sm:inline">Riders</a>
+                <a href="" className="sm:mr-12 block sm:inline">Location</a>
+                <a href="" className="block sm:inline">Contest</a>
             </nav>
         </div>
             
