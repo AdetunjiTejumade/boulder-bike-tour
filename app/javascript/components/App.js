@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import Home from '././home/home'
+import Photo from './photos'
 import '../../assets/stylesheets/main.css'
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
             {text}
         </div> */
         <div className="h-full">
-            <Home />         
+            <Home />
+            {/* <Photo /> */}
         </div>
     )
 }

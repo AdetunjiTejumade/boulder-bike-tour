@@ -8,7 +8,7 @@ function Counter() {
             {/* <Countdown 
                 /> */}
             <ul className="h-100 text-center text-white mt-32 uppercase">
-                <li className="inline-block text-6xl p-2  px-4 border-r-2">03 <br /><span className="block text-2xl">month</span></li>
+                <li className="inline-block text-6xl p-2  px-4 border-r-2">03 <br /><span className="block text-2xl">months</span></li>
                 <li className="inline-block text-6xl p-2 px-4 border-r-2">365 <br /><span className="block text-2xl">days</span></li>
                 <li className="inline-block text-6xl p-2 px-4 border-r-2">365 <br /><span className="block text-2xl">days</span></li>
                 <li className="inline-block text-6xl p-2 px-4 border-r-2">21 <br /><span className="block text-2xl"> Hours</span></li>
