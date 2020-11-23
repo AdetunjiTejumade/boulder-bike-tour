@@ -9,10 +9,11 @@ function Home() {
         <div className="bg-image h-full">
         <Navbar />,
         {/* <p className="text-white">hola</p> */}
+        <h2></h2>
         <Counter />
         
         </div>
     )
 }
-
+//1 3 
 export default Home;
