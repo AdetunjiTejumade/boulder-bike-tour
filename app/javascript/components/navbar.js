@@ -6,11 +6,11 @@ function Navbar() {
         // render here
         <>
         {/*TODO: change display from flex on smaller screens */}
-        <div className="md:flex justify-between p-6 text-white uppercase">
+        <div className="md:flex justify-between p-6 text-white uppercase ">
             <div className="">
-                <h1 className="font-bold">Rider</h1>
+                <h1 className="font-bold roboto">Boulder Creek</h1>
             </div>
-            <nav className="text-center ">
+            <nav className="text-center openSans">
                 <a href="" className="sm:mr-12 block sm:inline">Home</a>
                 <a href="" className="sm:mr-12 block sm:inline">Photos</a>
                 <a href="" className="sm:mr-12 block sm:inline">Riders</a>

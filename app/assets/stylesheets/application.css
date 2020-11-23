@@ -13,10 +13,40 @@
  *= require_tree .
  *= require_self
  */
+ @font-face {
+     font-family: 'roboto-bold';
+     src: url('Roboto-Bold.ttf') format('truetype');
+
+     
+     font-family: 'openSans-semiBold';
+     src: url('OpenSans-SemiBold.ttf') format('truetype');
+     
+     font-family: 'openSans';
+     src: url('OpenSans-Regular.ttf') format('truetype'); 
+ }
+ @font-face {
+    font-family: 'roboto';
+     src: url('Roboto-Regular.ttf') format('truetype');
+ }
+ .roboto-bold{
+     font-family:'roboto-bold';
+ }
+ .roboto{
+     font-family: 'roboto';
+ }
+ .openSans-semiBold {
+    font-family: 'openSans-semiBold';
+ }
+ .openSans {
+     font-family: 'openSans';
+ }
+
 html,body{
     width: 100%;
     height: 100%;
+    
 }
+
  .colon::before{
     content: ':';
     display: inline;
