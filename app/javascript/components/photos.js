@@ -5,10 +5,6 @@ function Photo() {
     return (
         //render stuff
         <>
-        <div className="bg-green-800">
-            <Navbar  />
-        </div>
-        
         <h1 className="text-center text-4xl">PHOTOS</h1>
 
         <div>

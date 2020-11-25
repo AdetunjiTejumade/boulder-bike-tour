@@ -6,8 +6,7 @@ function Home() {
     // do something here
     return (
         // render here
-        <div className="bg-image h-full">
-        <Navbar />,
+        <div className="">
         {/* <p className="text-white">hola</p> */}
         <h2></h2>
         <Counter />

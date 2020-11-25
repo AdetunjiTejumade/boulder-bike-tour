@@ -56,3 +56,9 @@ html,body{
     background-position: center;
     background-size: cover;
 } 
+
+@layer components {
+    .nav-link {
+        @apply sm:mr-12 block sm:inline;
+    }
+}
