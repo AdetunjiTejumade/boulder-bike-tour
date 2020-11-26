@@ -1,6 +1,6 @@
 import React from 'react'
 import Counter from './counter'
-import Navbar from './../navbar'
+import '../../../assets/stylesheets/home.css'
 
 function Home() {
     // do something here

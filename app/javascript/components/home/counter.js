@@ -24,11 +24,11 @@ function Counter() {
 
 
     useEffect(() => {
-        setInterval(() => {
+        const timer = setInterval(() => {
             timeLeft();
         }, 1000);
         return () => {
-            clearInterval();
+            clearInterval(timer);
         }
     });
     return (

@@ -5,14 +5,14 @@ import Riders from './riders'
 import Location from './location'
 import Contest from './contest'
 
-import { Link, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Link,NavLink, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function Navbar() {
     // do something here
     return (
-        <Router>
-            {/*TODO: change display from flex on smaller screens */}
-            <div className="bg-image h-full">
+        <>
+            {/* TODO: change display from flex on smaller screens */}
+            <div className=""></div>
                 <div className="md:flex justify-between p-6 text-white uppercase ">
                     <div className="">
                         <h1 className="font-bold roboto">Boulder Creek</h1>
@@ -24,34 +24,9 @@ function Navbar() {
                         <Link to="/location" className="sm:mr-12 block sm:inline">Location</Link>
                         <Link to="/contest" className="sm:mr-12 block sm:inline">Contest</Link>
                     </nav>
-
-
-
-                </div>
-                <Switch>
-                    <Route path="/photos">
-                        <Photo />
-                    </Route>
-
-                    <Route path="/riders">
-                        <Riders />
-                    </Route>
-
-                    <Route path="/location">
-                        <Location />
-                    </Route>
-
-                    <Route path="/contest">
-                        <Contest />
-                    </Route>
-
-                    <Route path="/">
-                        <Home />
-                    </Route>
-                </Switch>
-            </div>
-
-        </Router>
+                </div>                     
+            
+        </>
     )
 }
 
