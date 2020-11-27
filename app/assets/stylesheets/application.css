@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+.bg{
+    background-image: linear-gradient(rgb(0 0 0 / 38%), rgb(0 0 0 / 18%)), url('./02.jpg');
+    background-position: center;
+    background-size: cover;
+ }
+ .no-bg{
+     background-image: none;
+ }
  @font-face {
      font-family: 'roboto-bold';
      src: url('Roboto-Bold.ttf') format('truetype');
@@ -50,15 +58,4 @@ html,body{
  .colon::before{
     content: ':';
     display: inline;
-}
-.bg-image{
-    background-image: linear-gradient(rgb(0 0 0 / 38%), rgb(0 0 0 / 18%)), url('02.jpg');
-    background-position: center;
-    background-size: cover;
-} 
-
-@layer components {
-    .nav-link {
-        @apply sm:mr-12 block sm:inline;
-    }
 }

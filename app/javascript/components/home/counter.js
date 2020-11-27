@@ -35,7 +35,7 @@ function Counter() {
         // render here
         <>
             
-            <ul className="h-100 text-center text-white mt-32 uppercase">
+            <ul className="h-100 text-center text-white pt-32 uppercase">
                 <li className="inline-block text-6xl p-2 px-4 border-r-2">{days} <br /><span className="block text-2xl">days</span></li>
                 <li className="inline-block text-6xl p-2 px-4 border-r-2">{hours} <br /><span className="block text-2xl"> Hours</span></li>
                 <li className="inline-block text-6xl p-2 px-4 border-r-2">{minutes} <br /><span className="block text-2xl"> Minutes</span> </li>

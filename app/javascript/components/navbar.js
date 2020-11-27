@@ -12,13 +12,13 @@ function Navbar() {
     return (
         <>
             {/* TODO: change display from flex on smaller screens */}
-            <div className=""></div>
-                <div className="md:flex justify-between p-6 text-white uppercase ">
+            
+                <div className="md:flex justify-between p-6 text-white uppercase">
                     <div className="">
                         <h1 className="font-bold roboto">Boulder Creek</h1>
                     </div>
                     <nav className="text-center openSans">
-                        <Link to="/" className="sm:mr-12 block sm:inline">Home</Link>
+                        <Link to="/" onClick={() => setBg("linear-gradient(rgb(0 0 0 / 38%), rgb(0 0 0 / 18%)), url('./02.jpg')")} className="sm:mr-12 block sm:inline">Home</Link>
                         <Link to="/photos" className="sm:mr-12 block sm:inline">Photos</Link>
                         <Link to="/riders" className="sm:mr-12 block sm:inline">Riders</Link>
                         <Link to="/location" className="sm:mr-12 block sm:inline">Location</Link>
