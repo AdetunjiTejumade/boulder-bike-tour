@@ -2,18 +2,40 @@ import React from 'react'
 import Counter from './counter'
 import '../../../assets/stylesheets/home/home.css'
 import Navbar from '../navbar'
+import racer from '../../../assets/images/02.jpg'
 
 function Home() {
     // do something here
     return (
         // render here
-    <div className="">
-        {/* <p className="text-white">hola</p> */}
-        <h2></h2>
-        <Counter />
-        
-        </div>
+        <>
+            <div className="pt-16 pb-12 h-screen">
+                {/* Change font!!!  */}
+                <div className="text-center text-white">
+                    <h2 className="text-5xl capitalize">Boulder Mountain</h2>
+                    <h3 className="text-3xl">Starts in</h3>
+
+                    {/* The best Biking challenge of the year */}
+                </div>
+
+                <Counter />
+            </div>
+            <div className="bg-white pt-6">
+                <h3 className="text-center text-4xl">Boulder bike tour</h3>
+                <div className="px-16 mt-6 grid grid-cols-2 h-40">
+                    <div className="">
+                        <p>The boutain bike tour is one of the best</p>
+                        <p>lorem ipsum dot amet lo por dat set la met</p>
+                    </div>
+                    <div className="">
+                        <img src={racer} alt="a bike racer"/>
+                    </div>
+
+                </div>
+
+            </div>
+        </>
     )
 }
-//1 3 
+//
 export default Home;
