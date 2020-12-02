@@ -1,7 +1,7 @@
 import React from 'react'
 import Counter from './counter'
 import '../../../assets/stylesheets/home/home.css'
-import Navbar from '../navbar'
+import Footer from '../footer'
 import racer from '../../../assets/images/02.jpg'
 
 function Home() {
@@ -20,9 +20,9 @@ function Home() {
 
                 <Counter />
             </div>
-            <div className="bg-white pt-6">
+            <div className="bg-white pt-6 pb-12">
                 <h3 className="text-center text-4xl">Boulder bike tour</h3>
-                <div className="px-16 mt-6 grid grid-cols-2 h-40">
+                <div className="px-16 mt-6 grid grid-cols-2">
                     <div className="">
                         <p>The boutain bike tour is one of the best</p>
                         <p>lorem ipsum dot amet lo por dat set la met</p>
@@ -34,6 +34,7 @@ function Home() {
                 </div>
 
             </div>
+            <Footer />
         </>
     )
 }
