@@ -29,7 +29,7 @@ function App() {
              {text}
          </div> */
         <div className={ isHome ? 'bg' : '' }>
-            <div className="md:flex justify-between p-6 text-white uppercase">
+            <div className={ isHome ? 'md:flex justify-between p-6 text-white uppercase bg-none' : 'md:flex justify-between p-6 text-white uppercase bg-gray-500' }>
                 <div className="">
                     <h1 className="font-bold roboto">Boulder Creek</h1>
                 </div>
