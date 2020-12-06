@@ -5,7 +5,8 @@ import Photo from './photos'
 import Riders from './riders'
 import Location from './location'
 import Contest from './contest'
-import '../../assets/stylesheets/main.css'
+// import '../../assets/stylesheets/main.css'
+import "tailwindcss/tailwind.css"
 import image from '../../assets/images/02.jpg'
 import { Link, BrowserRouter as Router, Switch, Route, useLocation  } from 'react-router-dom';
 
