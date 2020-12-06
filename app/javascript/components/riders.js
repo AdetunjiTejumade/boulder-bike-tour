@@ -10,12 +10,12 @@ function Riders() {
                     {riders.map((items, index) => {
                         const { firstName, lastName, city, state } = items;
                         return (
-                            <div className="shadow-xl md:w-56 p-4 m-4" key={index}>
+                            <div className="shadow-xl md:w-56 p-10 m-4" key={index}>
 
-                                <p>Name : {firstName} {lastName}</p>
+                                <p><b>Name :</b> {firstName} {lastName}</p>
 
-                                <p>City of Origin : {city}</p>
-                                <p>State of Origin : {state}</p>
+                                <p><b>City of Origin :</b> {city}</p>
+                                <p><b>State of Origin :</b> {state}</p>
                             </div>
                         )
                     })}
