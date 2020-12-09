@@ -2,7 +2,7 @@ import React from 'react'
 import Counter from './counter'
 import '../../../assets/stylesheets/home/home.css'
 import Footer from '../footer'
-import racer from '../../../assets/images/02.jpg'
+import racer from '../../../assets/images/03.jpg'
 
 function Home() {
     // do something here

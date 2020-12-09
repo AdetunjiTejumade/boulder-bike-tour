@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+9.times do |i|
+    Submission.create(
+        firstname: "Contestant #{i + 1}",
+        lastname: "lastname",
+        email: "email #{i + 1}",
+        slogan: "the best bike tour on the planet"
+    )
+end
