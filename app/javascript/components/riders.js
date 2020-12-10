@@ -1,7 +1,8 @@
 import React from 'react';
-import {riders} from './riderInfo'
+import { riders } from './riderInfo'
+import Footer from './footer'
 function Riders() {
-    
+
 
     return (
         <>
@@ -24,6 +25,7 @@ function Riders() {
 
 
             </div>
+            <Footer />
         </>
     )
 }

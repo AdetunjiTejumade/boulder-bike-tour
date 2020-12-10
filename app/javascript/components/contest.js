@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios'
 import { useForm } from 'react-hook-form'
 import biking from '../../assets/images/04.jpg'
+import Footer from './footer'
 
 function Contest() {
     const { register, handleSubmit, errors } = useForm({
@@ -24,6 +25,7 @@ function Contest() {
 
     }
     return (
+        <>
         <div className="md:mx-12">
             <h1 className="text-center text-4xl">Contest</h1>
             <div className="mt-12 
@@ -91,6 +93,8 @@ function Contest() {
             </div>
 
         </div>
+        <Footer　/>
+        </>
     )
 }
 

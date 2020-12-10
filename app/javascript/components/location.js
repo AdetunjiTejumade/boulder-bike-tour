@@ -2,6 +2,7 @@ import React from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Icon } from "leaflet";
 import { riders } from './riderInfo'
+import Footer from './footer'
 
 function Location() {
     const token = 'pk.eyJ1IjoidGVqdW1hZGUiLCJhIjoiY2tpY256OTR0MWI2ZTJ5bzVydHk0aDJmcCJ9._zaIJ1d9pVt2WX9YDOR5iw'
@@ -31,6 +32,7 @@ function Location() {
                 }
 
             </MapContainer>
+           <Footer /> 
         </>
 
     )
