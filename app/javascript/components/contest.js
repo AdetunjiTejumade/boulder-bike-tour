@@ -24,20 +24,29 @@ function Contest() {
 
     }
     return (
-        <div >
-            <h1>Contest</h1>
-            <div className="mt-12 flex justify-center bg-center bg-cover w-full"　style={{ backgroundImage:`url(${biking})` }} >
+        <div className="md:mx-12">
+            <h1 className="text-center text-4xl">Contest</h1>
+            <div className="mt-12 
+                flex 
+                justify-center 
+                bg-center 
+                bg-cover 
+                w-full 
+                p-4
+                h-full
+                "
+                style={{ backgroundImage: `url(${biking})` }} >
                 {/* <div>
                     <img src={biking} alt="bike racing" className="h-40"/>
                 </div> */}
-                <form onSubmit={handleSubmit(onSubmit)} className="p-6">
+                <form onSubmit={handleSubmit(onSubmit)} className="w-64">
                     <input
                         name="firstname"
                         ref={register({
                             required: true,
                         })}
                         placeholder="Firstname"
-                        className="block w-full h-12 bg-transparent "
+                        className="block h-12 w-full bg-transparent mt-4 border-2 border-gray-600 border-solid"
                         style={{ borderColor: errors.firstname && "red" }}
                     />
                     {errors.firstname && "Your input is required"}
@@ -47,7 +56,7 @@ function Contest() {
                             required: true,
                         })}
                         placeholder="Lastname"
-                        className="block w-full h-12 bg-transparent"
+                        className="block w-full h-12 bg-transparent mt-4 border-2 border-gray-600 border-solid"
                         style={{ borderColor: errors.lastname && "red" }}
                     />
                     {errors.lastname && "Your input is required"}
@@ -58,7 +67,7 @@ function Contest() {
                             // validate: (input) => isEmail(input), ?.type === "required" 
 
                         })}
-                        className="block w-full h-12 bg-transparent"
+                        className="block w-full h-12 bg-transparent mt-4 border-2 border-gray-600 border-solid"
                         style={{ borderColor: errors.email && "red" }}
                         placeholder="Email"
                     />
@@ -70,13 +79,13 @@ function Contest() {
                             maxLength: 50,
 
                         })}
-                        className="block w-full h-12 bg-transparent"
+                        className="block w-full h-12 bg-transparent mt-4 border-2 border-gray-600 border-solid"
                         style={{ borderColor: errors.slogan && "red" }}
                         placeholder="enter slogan...."
                     />
                     {errors.slogan?.type === "required" && "Your input is required"}
                     {errors.slogan?.type === "maxLength" && "Your input exceed max length"}
-                    <button type="submit"  className="block">Submit</button>
+                    <button type="submit" className="block">Submit</button>
 
                 </form>
             </div>
