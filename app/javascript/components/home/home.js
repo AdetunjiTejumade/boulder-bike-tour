@@ -33,7 +33,7 @@ function Home() {
                 </div>
 
             </div>
-            <Footer />
+            <Footer style={{position: 'relative'}}/>
         </>
     )
 }

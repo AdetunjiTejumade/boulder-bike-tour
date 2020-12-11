@@ -11,6 +11,9 @@ function Location() {
     return (
 
         <>
+
+
+
             <MapContainer center={position} zoom={13} className="h-full mx-6">
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -22,17 +25,20 @@ function Location() {
                         const { firstName, lastName, coordinates } = items;
                         const [lat, lon] = coordinates;
                         return (
-                            <Marker position={{lat, lon}} key={index}>
+                            <Marker position={{ lat, lon }} key={index}>
                                 <Popup>
-                                    {firstName } {lastName}
-                            </Popup>
+                                    {firstName} {lastName}
+                                </Popup>
                             </Marker>
                         )
                     })
                 }
 
             </MapContainer>
-           <Footer /> 
+
+
+
+            <Footer style={{position: 'relative', marginTop: '3rem'}} />
         </>
 
     )

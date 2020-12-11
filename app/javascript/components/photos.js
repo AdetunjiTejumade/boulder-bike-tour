@@ -17,69 +17,73 @@ function Photo() {
             .get(url)
             .then((result) => {
                 setItems(result.data.photos.photo)
-               // setItemNum(result.data.photos.photo.length) //30
+                // setItemNum(result.data.photos.photo.length) //30
             })
     }, [])
     const fetchMore = () => {
-        if (items.length >= 100) { 
+        if (items.length >= 100) {
             setHasMore(false)
             return;
-            }
-            axios
-                .get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f7bce21009318f2bb6bccbeaf0845b2d&tags=%23bikerace%2C%23BoulderBikeTour&per_page=${items.length + 30}&format=json&nojsoncallback=1`)
-                .then((result) => {
-                    setItems(result.data.photos.photo)
-                    // [...items,...result.data.photos.photo]
-                    // setItemNum(result.data.photos.photo.length)
-                })
-            // return items.length
-            console.log(items.length)
-        
+        }
+        axios
+            .get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f7bce21009318f2bb6bccbeaf0845b2d&tags=%23bikerace%2C%23BoulderBikeTour&per_page=${items.length + 30}&format=json&nojsoncallback=1`)
+            .then((result) => {
+                setItems(result.data.photos.photo)
+                // [...items,...result.data.photos.photo]
+                // setItemNum(result.data.photos.photo.length)
+            })
+        // return items.length
+        console.log(items.length)
+
     }
     //
     // console.log(fetchMore());
     return (
 
         <>
-            <h1 className="text-center text-4xl">PHOTOS</h1>
-            {/* photos */}
-            <div className="pt-12">
-                <div className="">
-                    <InfiniteScroll
-                        dataLength={items.length}
-                        next={fetchMore}
-                        hasMore={hasMore}
-                        className="md:grid grid-cols-3 mx-12"
-                        // loader={<h4>Loading...</h4>}
-                        endMessage={
-                            <p style={{ textAlign: "center" }}>
-                                <b>Yay! You have seen it all</b>
-                            </p>
-                        }
+            <div className="min-h-full relative">
+                
+                {/* photos */}
+                <div className="pt-12 pb-32">
+                    <h1 className="text-center text-4xl">PHOTOS</h1>
+                    <div className="">
+                        <InfiniteScroll
+                            dataLength={items.length}
+                            next={fetchMore}
+                            hasMore={hasMore}
+                            className="md:grid grid-cols-3 mx-12"
+                            // loader={<h4>Loading...</h4>}
+                            endMessage={
+                                <p style={{ textAlign: "center" }}>
+                                    <b>Yay! You have seen it all</b>
+                                </p>
+                            }
 
-                    >
+                        >
 
 
-                        {items.map((image, index) => {
-                            const { id, secret, farm, title, server } = image
-                            // console.log(id);
-                            const download_url = 'https://farm' + farm + '.staticflickr.com/' + server + '/' + id + '_' + secret + '.jpg'
-                            return (
-                                <div className="m-4 text-center bg-gray-200" key={index} >
-                                    <LazyLoad height={200} placeholder={<Loader />} debounce={500} offset={[-200, 0]}>
-                                        <img
-                                            alt={title}
-                                            className="object-cover h-56 w-full"
-                                            src={download_url}
-                                        />
-                                    </LazyLoad>
-                                </div>
+                            {items.map((image, index) => {
+                                const { id, secret, farm, title, server } = image
+                                // console.log(id);
+                                const download_url = 'https://farm' + farm + '.staticflickr.com/' + server + '/' + id + '_' + secret + '.jpg'
+                                return (
+                                    <div className="m-4 text-center bg-gray-200" key={index} >
+                                        <LazyLoad height={200} placeholder={<Loader />} debounce={500} offset={[-200, 0]}>
+                                            <img
+                                                alt={title}
+                                                className="object-cover h-56 w-full"
+                                                src={download_url}
+                                            />
+                                        </LazyLoad>
+                                    </div>
 
-                            )
-                        })}</InfiniteScroll>
+                                )
+                            })}</InfiniteScroll>
+                    </div>
                 </div>
+                <Footer />
             </div>
-            <Footer />
+
         </>
     )
 
