@@ -25,6 +25,7 @@ function Contest() {
 
     }
     return (
+        // form error design
         <>
             <div className="relative min-h-full">
                 <div className="md:mx-12 pb-32">
@@ -52,7 +53,7 @@ function Contest() {
                                 className="block h-12 w-full bg-transparent mt-4 border-2 border-gray-600 border-solid"
                                 style={{ borderColor: errors.firstname && "red" }}
                             />
-                            {errors.firstname && "Your input is required"}
+                            {errors.firstname && <span className="text-red-600">Your input is required</span>}
                             <input
                                 name="lastname"
                                 ref={register({
@@ -62,7 +63,7 @@ function Contest() {
                                 className="block w-full h-12 bg-transparent mt-4 border-2 border-gray-600 border-solid"
                                 style={{ borderColor: errors.lastname && "red" }}
                             />
-                            {errors.lastname && "Your input is required"}
+                            {errors.lastname && <span className="text-red-600">Your input is required</span>}
                             <input
                                 name="email"
                                 ref={register({
@@ -74,7 +75,7 @@ function Contest() {
                                 style={{ borderColor: errors.email && "red" }}
                                 placeholder="Email"
                             />
-                            {errors.email && "Your input is required"}
+                            {errors.email && <span className="text-red-600">Your input is required</span>}
                             <textarea
                                 name="slogan"
                                 ref={register({
@@ -84,11 +85,11 @@ function Contest() {
                                 })}
                                 className="block w-full h-12 bg-transparent mt-4 border-2 border-gray-600 border-solid"
                                 style={{ borderColor: errors.slogan && "red" }}
-                                placeholder="enter slogan...."
+                                placeholder="Enter slogan...."
                             />
-                            {errors.slogan?.type === "required" && "Your input is required"}
+                            {errors.slogan?.type === "required" && <span className="text-red-600">Your input is required</span>}
                             {errors.slogan?.type === "maxLength" && "Your input exceed max length"}
-                            <button type="submit" className="block">Submit</button>
+                            <button type="submit" className="block h-10 mt-4 border-2 border-gray-600 border-solid px-12 font-semibold outline-none py-2">Submit</button>
 
                         </form>
                     </div>
