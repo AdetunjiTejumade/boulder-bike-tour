@@ -19,7 +19,7 @@ function Home() {
 
                 <Counter />
             </div>
-            <div className="bg-white pt-6 pb-12">
+            <div className="bg-white pt-6 pb-12 mb-12">
                 <h3 className="text-center text-4xl">Boulder bike tour</h3>
                 <div className="px-16 mt-6 grid grid-cols-2">
                     <div className="">

@@ -1,33 +1,59 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Home from '././home/home'
 import Photo from './photos'
 import Riders from './riders'
 import Location from './location'
 import Contest from './contest'
-
-import { Link,NavLink, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Link, NavLink, BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function Navbar() {
     // do something here
+    const [toggle, setToggle] = useState(false)
+    const Toggle = () => {
+        setToggle(!toggle)
+        console.log(toggle);
+    }
+
     return (
         <>
-            {/* TODO: change display from flex on smaller screens */}
-            
-                <div className="md:flex justify-between p-6 text-white uppercase">
-                    <div className="">
-                        <h1 className="font-bold roboto">Boulder Creek</h1>
+
+            {/* small navbar */}
+            <div className="">
+                <div className="flex justify-between">
+                    <h1 className="font-bold roboto">Boulder Creek</h1>
+                    
+                    <div className="md:hidden">
+                         <button className={toggle ? "hidden" : "block text-white text-xl font-semibold"} onClick={Toggle}>☰</button>
+                        <button className={toggle ? "block text-white text-3xl font-semibold" : "hidden"} onClick={Toggle} >&times;</button>
+                   
                     </div>
-                    <nav className="text-center openSans">
-                        <Link to="/" onClick={() => setBg("linear-gradient(rgb(0 0 0 / 38%), rgb(0 0 0 / 18%)), url('./02.jpg')")} className="sm:mr-12 block sm:inline">Home</Link>
-                        <Link to="/photos" className="sm:mr-12 block sm:inline">Photos</Link>
-                        <Link to="/riders" className="sm:mr-12 block sm:inline">Riders</Link>
-                        <Link to="/location" className="sm:mr-12 block sm:inline">Location</Link>
-                        <Link to="/contest" className="sm:mr-12 block sm:inline">Contest</Link>
+                       
+
+                </div>
+
+
+                <div className={toggle ? "block md:hidden" : "hidden"} >
+
+                    <nav className="overlay-content font-extrabold text-3xl">
+                        <Link to="/" className="md:mr-12 block md:inline">Home</Link>
+                        <Link to="/photos" className="md:mr-12 block md:inline">Photos</Link>
+                        <Link to="/riders" className="md:mr-12 block md:inline">Riders</Link>
+                        <Link to="/location" className="md:mr-12 block md:inline">Location</Link>
+                        <Link to="/contest" className="md:mr-12 block md:inline">Contest</Link>
                     </nav>
-                </div>                     
-            
+                </div>
+            </div>
+
+            {/* large navbar */}
+            <nav className="text-center openSans hidden md:block">
+                <Link to="/" className="md:mr-12 block md:inline">Home</Link>
+                <Link to="/photos" className="md:mr-12 block md:inline">Photos</Link>
+                <Link to="/riders" className="md:mr-12 block md:inline">Riders</Link>
+                <Link to="/location" className="md:mr-12 block md:inline">Location</Link>
+                <Link to="/contest" className="md:mr-12 block md:inline">Contest</Link>
+            </nav>
         </>
+
     )
 }
-
 export default Navbar;
