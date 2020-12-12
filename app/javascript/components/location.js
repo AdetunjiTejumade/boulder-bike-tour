@@ -1,6 +1,5 @@
 import React from 'react';
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import { Icon } from "leaflet";
 import { riders } from './riderInfo'
 import Footer from './footer'
 
@@ -11,9 +10,6 @@ function Location() {
     return (
 
         <>
-
-
-
             <MapContainer center={position} zoom={13} className="h-full mx-6">
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -35,8 +31,6 @@ function Location() {
                 }
 
             </MapContainer>
-
-
 
             <Footer style={{position: 'relative', marginTop: '3rem'}} />
         </>

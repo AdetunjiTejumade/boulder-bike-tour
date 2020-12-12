@@ -12,8 +12,6 @@ function Contest() {
     const onSubmit = (data) => {
 
         const token = document.querySelector('meta[name="csrf-token"]').content;
-        // const data = { firstname: "tolu", lastname: "ade", email: "bdf", slogan: "looks like the first one worked again" }
-        // useEffect(() => {
         const headers = {
             "X-CSRF-Token": token,
             "Content-Type": "application/json"
@@ -21,14 +19,12 @@ function Contest() {
 
         axios.post('http://localhost:3000/api/v1/submissions/create', data, { headers })
         console.log(data);
-        // }, [])
-
     }
     return (
-        // form error design
+
         <>
             <div className="relative min-h-full">
-                <div className="md:mx-12 pb-32">
+                <div className="md:mx-12 pt-12">
                     <h1 className="text-center text-4xl">Contest</h1>
                     <div className="mt-12 
                 flex 
@@ -40,10 +36,8 @@ function Contest() {
                 h-full
                 "
                         style={{ backgroundImage: `url(${biking})` }} >
-                        {/* <div>
-                    <img src={biking} alt="bike racing" className="h-40"/>
-                </div> */}
-                        <form onSubmit={handleSubmit(onSubmit)} className="w-64">
+
+                        <form onSubmit={handleSubmit(onSubmit)} className="w-64 py-6">
                             <input
                                 name="firstname"
                                 ref={register({
@@ -68,8 +62,6 @@ function Contest() {
                                 name="email"
                                 ref={register({
                                     required: true,
-                                    // validate: (input) => isEmail(input), ?.type === "required" 
-
                                 })}
                                 className="block w-full h-12 bg-transparent mt-4 border-2 border-gray-600 border-solid"
                                 style={{ borderColor: errors.email && "red" }}

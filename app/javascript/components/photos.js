@@ -17,7 +17,6 @@ function Photo() {
             .get(url)
             .then((result) => {
                 setItems(result.data.photos.photo)
-                // setItemNum(result.data.photos.photo.length) //30
             })
     }, [])
     const fetchMore = () => {
@@ -29,20 +28,13 @@ function Photo() {
             .get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f7bce21009318f2bb6bccbeaf0845b2d&tags=%23bikerace%2C%23BoulderBikeTour&per_page=${items.length + 30}&format=json&nojsoncallback=1`)
             .then((result) => {
                 setItems(result.data.photos.photo)
-                // [...items,...result.data.photos.photo]
-                // setItemNum(result.data.photos.photo.length)
             })
-        // return items.length
-        console.log(items.length)
-
     }
-    //
-    // console.log(fetchMore());
-    return (
 
+    return (
         <>
             <div className="min-h-full relative">
-                
+
                 {/* photos */}
                 <div className="pt-12 pb-32">
                     <h1 className="text-center text-4xl">PHOTOS</h1>
@@ -64,7 +56,6 @@ function Photo() {
 
                             {items.map((image, index) => {
                                 const { id, secret, farm, title, server } = image
-                                // console.log(id);
                                 const download_url = 'https://farm' + farm + '.staticflickr.com/' + server + '/' + id + '_' + secret + '.jpg'
                                 return (
                                     <div className="m-4 text-center bg-gray-200" key={index} >
@@ -76,7 +67,6 @@ function Photo() {
                                             />
                                         </LazyLoad>
                                     </div>
-
                                 )
                             })}</InfiniteScroll>
                     </div>
