@@ -6,8 +6,12 @@ import Location from './location'
 import Contest from './contest'
 import Navbar from './navbar'
 import { Switch, Route, useLocation } from 'react-router-dom';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
 function App() {
+    library.add(fab)
     const location = useLocation();
 
     const paths = location.pathname;
