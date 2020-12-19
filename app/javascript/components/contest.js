@@ -5,7 +5,7 @@ import biking from '../../assets/images/04.jpg'
 import Footer from './footer'
 
 function Contest() {
-    const { register, handleSubmit, errors } = useForm({
+    const { register, handleSubmit, errors, reset } = useForm({
         mode: "onBlur"
     });
 
@@ -18,6 +18,7 @@ function Contest() {
         }
 
         axios.post('http://localhost:3000/api/v1/submissions/create', data, { headers })
+        reset();
         console.log(data);
     }
     return (
