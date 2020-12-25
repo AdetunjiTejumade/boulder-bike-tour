@@ -14,7 +14,7 @@
  *= require_self
  */
 .bg{
-    background-image: linear-gradient(#00000061, #0000002e), url('./02.jpg');
+    background-image: linear-gradient(#00000061, #0000002e), image-url('02.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -25,18 +25,18 @@
 
  @font-face {
      font-family: 'roboto-bold';
-     src: url('Roboto-Bold.ttf') format('truetype');
+     src: font-url('Roboto-Bold.ttf') format('truetype');
 
      
      font-family: 'openSans-semiBold';
-     src: url('OpenSans-SemiBold.ttf') format('truetype');
+     src: font-url('OpenSans-SemiBold.ttf') format('truetype');
      
      font-family: 'openSans';
-     src: url('OpenSans-Regular.ttf') format('truetype'); 
+     src: font-url('OpenSans-Regular.ttf') format('truetype'); 
  }
  @font-face {
     font-family: 'roboto';
-     src: url('Roboto-Regular.ttf') format('truetype');
+     src: font-url('Roboto-Regular.ttf') format('truetype');
  }
  .roboto-bold{
      font-family:'roboto-bold';
